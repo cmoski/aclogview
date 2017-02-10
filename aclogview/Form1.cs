@@ -58,7 +58,7 @@ namespace aclogview
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.AddExtension = true;
-            openFile.Filter = "Packet Captures (*.pcap;*.pcapng)|*.pcap;*.pcapng|All Files (*.*)|*.*";
+            openFile.Filter = "Packet Captures (*.pcap)|*.pcap|All Files (*.*)|*.*";
 
             if (openFile.ShowDialog() != DialogResult.OK)
             {
