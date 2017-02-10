@@ -270,7 +270,6 @@
             this.textBox_Search.Size = new System.Drawing.Size(219, 22);
             this.textBox_Search.TabIndex = 2;
             this.textBox_Search.Visible = false;
-            this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
             // 
             // pictureBox_Search
             // 
@@ -281,7 +280,6 @@
             this.pictureBox_Search.TabIndex = 3;
             this.pictureBox_Search.TabStop = false;
             this.pictureBox_Search.Visible = false;
-            this.pictureBox_Search.Click += new System.EventHandler(this.pictureBox_Search_Click);
             // 
             // statusStrip
             // 

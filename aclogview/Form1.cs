@@ -330,8 +330,8 @@ namespace aclogview
 
             UdpHeader udpHeader = UdpHeader.read(binaryReader);
 
-            bool isSend = (udpHeader.dPort >= 9000 && udpHeader.dPort <= 9013);
-            bool isRecv = (udpHeader.sPort >= 9000 && udpHeader.sPort <= 9013);
+            bool isSend = (udpHeader.dPort >= 9000 && udpHeader.dPort <= 10000); //Custom gameservers use higher ports
+            bool isRecv = (udpHeader.sPort >= 9000 && udpHeader.sPort <= 10000);
 
             // Skip non-AC-port packets
             if (!isSend && !isRecv)
@@ -1129,15 +1129,6 @@ namespace aclogview
             popup.ShowDialog();
         }
 
-        private void pictureBox_Search_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox_Search_TextChanged(object sender, EventArgs e)
-        {
-            ListViewItem f = listView_Packets.FindItemWithText(textBox_Search.Text,true,0);
-            
-        }
     }
 }
