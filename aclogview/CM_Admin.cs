@@ -144,6 +144,7 @@ public class CM_Admin : MessageProcessor
             rootNode.Nodes.Add("Unk4 = " + Unk4.ToString("X"));
             rootNode.Nodes.Add("Unk5 = " + Unk5.ToString("X"));
             rootNode.Nodes.Add("Unk6 = " + Unk6.ToString("X"));
+            rootNode.Nodes.Add("PayloadSize = " + payload_size.ToString("X"));
 
             if (TurbineChatType == 0x1)
             {
@@ -164,9 +165,9 @@ public class CM_Admin : MessageProcessor
             else if(TurbineChatType == 0x3)
             {
                 TreeNode MsgType = rootNode.Nodes.Add("Outbound Msg (0x3)");
-                MsgType.Nodes.Add("unk1 = " + unk3_1.ToString());
-                MsgType.Nodes.Add("unk2 = " + unk3_2.ToString());
-                MsgType.Nodes.Add("unk3 = " + unk3_3.ToString());
+                MsgType.Nodes.Add("serial = " + unk3_1.ToString());
+                MsgType.Nodes.Add("unk1 = " + unk3_2.ToString());
+                MsgType.Nodes.Add("unk2 = " + unk3_3.ToString());
                 MsgType.Nodes.Add("out_channel = " + out_channel.ToString());
 
                 MsgType.Nodes.Add("OutboundMsgLen = " + ob_msgLen.ToString());
@@ -180,10 +181,10 @@ public class CM_Admin : MessageProcessor
             if(TurbineChatType == 0x5)
             {
                 TreeNode MsgType = rootNode.Nodes.Add("Inbound Ack of Outbound Msg (0x5)");
-                MsgType.Nodes.Add("unk1 = " + unk1_1.ToString());
-                MsgType.Nodes.Add("unk2 = " + unk1_2.ToString());
-                MsgType.Nodes.Add("unk3 = " + unk1_3.ToString());
-                MsgType.Nodes.Add("unk4 = " + unk1_4.ToString());
+                MsgType.Nodes.Add("Serial = " + unk1_1.ToString());
+                MsgType.Nodes.Add("unk1 = " + unk1_2.ToString());
+                MsgType.Nodes.Add("unk2 = " + unk1_3.ToString());
+                MsgType.Nodes.Add("unk3 = " + unk1_4.ToString());
             }
           
             treeView.Nodes.Add(rootNode);
